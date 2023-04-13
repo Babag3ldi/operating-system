@@ -2,8 +2,11 @@ import 'dart:io';
 
 import 'package:os_learning/screens/about_page.dart';
 import 'package:flutter/material.dart';
+import 'package:os_learning/videos/video_page.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+
+import '../videos/video_home.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -33,6 +36,22 @@ class MyDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: const Text(
+              'Videos Tutorial',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+            ),
+            leading: Icon(
+              Icons.video_collection_rounded,
+              color: Theme.of(context).primaryColor,
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const VideoHomePage()),
+              );
             },
           ),
           ListTile(

@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.os_learning">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="os_learning"
+        android:label="OS learning"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
